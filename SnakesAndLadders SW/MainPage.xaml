@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnakesAndLadders_SW.MainPage">
+
+
+    <StackLayout>
+        <Grid x:Name="GridGameTable" BackgroundColor="Blue" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="480" WidthRequest="480">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="board.png" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" Grid.RowSpan="10" Grid.ColumnSpan="10" />
+            <!-- player piece -->
+            <BoxView x:Name="BVPlayer1" Color="Crimson" Grid.Row="11" Grid.Column="1" HeightRequest="30"  WidthRequest="30" CornerRadius="15" HorizontalOptions="Center" VerticalOptions="Center" />
+            <BoxView x:Name="BVPlayer2" Color="Magenta" Grid.Row="11" Grid.Column="2" HeightRequest="30"  WidthRequest="30" CornerRadius="15" HorizontalOptions="Center" VerticalOptions="Center" />
+            <BoxView x:Name="BVPlayer3" Color="Turquoise" Grid.Row="11" Grid.Column="3" HeightRequest="30"  WidthRequest="30" CornerRadius="15" HorizontalOptions="Center" VerticalOptions="Center" />
+            
+            <!-- buttons -->
+            <Button x:Name="BtnSave" Text="Save" Grid.Row="11" Grid.Column="7" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Clicked="BtnSave_Clicked"/>
+            <Button x:Name="BtnDice" Text="Roll" Grid.Row="11" Grid.Column="9" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Clicked="BtnDice_Clicked" />
+        </Grid>
+        <Label x:Name="LblDebug" Text="Starting" HorizontalOptions="Start" Margin="3, 3" />
+    </StackLayout>
+</ContentPage>
